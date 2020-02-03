@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delete confirm</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <h2>wanna really delete{{ product.description }}</h2>
+    <button type="submit">confirm</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PRODUCTS</title>
+</head>
+<body>
+<ul>
+{% for product in products %}
+
+    <li>{{  product.description }}</li>
+    <li>{{ product.quantity }}</li>
+    <li>{{ product.image }}</li>
+    <a href="{% url 'update_product' product.id%}">update</a>
+    <a href="{% url 'delete_product' product.id%}">delete</a>
+    {% endfor %}
+
+
+</ul>
+<a href="{% url 'create_product' %}">create product</a>
+
+
+</body>
+</html>
